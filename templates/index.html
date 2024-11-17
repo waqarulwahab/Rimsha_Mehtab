@@ -1,0 +1,64 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+{% block content %}
+    
+    {% include "sections/header.html" %}
+
+    <main class="main">
+        <container class="hero-background hero-background-color-1">
+            {% include "sections/hero.html" %}
+        </container>
+
+        <container class="background-section background-image-1">
+            {% include "sections/about.html" %}
+            {% include "sections/education.html" %}
+            {% include "sections/experience.html" %}
+            {% include "sections/skills.html" %}
+        </container>
+
+        
+
+        {% include "sections/cta.html" %}
+
+
+        <container class="background-section background-image-2">
+            {% comment %} {% include "sections/clients.html" %} {% endcomment %}
+            {% include "sections/services.html" %}
+        </container>
+
+        {% include "sections/counts.html" %}
+
+        {% comment %} <container class="background-section background-image-3">
+            {% include "sections/projects.html" %}
+        </container> {% endcomment %}
+
+
+        {% include "sections/footer.html" %}
+
+
+    </main>
+
+
+      <!-- Vendor JS Files -->
+      <script src="{% static '/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+      <script src="{% static '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static '/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+      <script src="{% static '/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static '/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+
+      <!-- Template Main JS File -->
+      <script src="{% static '/assets/js/main.js' %}"></script>
+
+{% endblock %}
+
+
+
+
+        {% comment %} {% include "sections/about.html" %}
+
+        {% include "sections/education.html" %}
+
+        {% include "sections/experience.html" %} {% endcomment %}
