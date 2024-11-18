@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-ip5&_(%trew458_booc*w3dk*9a0%sh79*zj^ng&+w!pn5oww%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rimsha.vercel.app', '127.0.0.1:8000', '127.0.0.1']
+ALLOWED_HOSTS = ['1751-39-62-182-227.ngrok-free.app', '127.0.0.1:8000', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://1751-39-62-182-227.ngrok-free.app']
 
 
 
@@ -121,10 +122,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # Add this line
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 
 
 MEDIA_URL = '/media/'
