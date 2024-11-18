@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     theme       = ThemeSettings.objects.first()
     about       = AboutMe.objects.latest('created_at')
+    # about       = AboutMe.objects.first()
     clients     = Client.objects.all()
     categories  = ProjectCategory.objects.all()
     section     = AchievementsSection.objects.first()

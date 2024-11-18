@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-ip5&_(%trew458_booc*w3dk*9a0%sh79*zj^ng&+w!pn5oww%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['1751-39-62-182-227.ngrok-free.app', '127.0.0.1:8000', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://1751-39-62-182-227.ngrok-free.app']
+ALLOWED_HOSTS = ['0431-39-62-182-227.ngrok-free.app', '127.0.0.1:8000', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://0431-39-62-182-227.ngrok-free.app']
 
 
 
