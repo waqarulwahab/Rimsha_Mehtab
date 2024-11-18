@@ -32,7 +32,7 @@ def index(request):
     total_projects = Project.objects.count()
 
     # Determine how many projects to load based on the query parameter
-    load_more = int(request.GET.get('load_more', 10))  # Default to 10 if no parameter is provided
+    # load_more = int(request.GET.get('load_more', 10))  # Default to 10 if no parameter is provided
 
     # Get the selected category from the query parameter
     selected_category = request.GET.get('category', '*')
@@ -41,7 +41,8 @@ def index(request):
     projects_with_images_by_category = []
     if selected_category == '*':
         for category in categories:
-            projects = Project.objects.filter(category=category)[:load_more]
+            # projects = Project.objects.filter(category=category)[:load_more]
+            projects = Project.objects.filter(category=category)
             for project in projects:
                 images = project.images.all()
                 projects_with_images_by_category.append({
@@ -51,7 +52,8 @@ def index(request):
                 })
     else:
         selected_category_obj = ProjectCategory.objects.get(id=selected_category)
-        projects = Project.objects.filter(category=selected_category_obj)[:load_more]
+        # projects = Project.objects.filter(category=selected_category_obj)[:load_more]
+        projects = Project.objects.filter(category=selected_category_obj)
         for project in projects:
             images = project.images.all()
             projects_with_images_by_category.append({
@@ -71,7 +73,7 @@ def index(request):
         'services': services,
         'bg_image': bg_image,
         'total_projects': total_projects,
-        'loaded_projects': load_more,
+        # 'loaded_projects': load_more,
         'selected_category': selected_category,  # Pass the selected category to the template
         'skills': skills,
     }
